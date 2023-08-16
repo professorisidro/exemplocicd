@@ -32,11 +32,11 @@ jobs:
     - name: Copiando arquivos para a Oracle Cloud
       uses: appleboy/scp-action@v0.0.1
       with:
-        host: 144.22.179.172
+        host: "144.22.179.172"
         fingerprint: ${{ secrets.ORACLE_FINGERPRINT }}
-        source: ./target/exemplocicd-0.0.1-SNAPSHOT.jar
-        target: /home/opc/api/
-        username: opc
+        source: "./target/exemplocicd-0.0.1-SNAPSHOT.jar"
+        target: "/home/opc/api/"
+        username: "opc"
       
    
     
