@@ -30,7 +30,7 @@ jobs:
     - name: Listing contents
       run: ls -la
     - name: Copiando arquivos para a Oracle Cloud
-      uses: appleboy/scp-action@v0.0.1
+      uses: appleboy/scp-action@master
       with:
         host: "144.22.179.172"
         fingerprint: ${{ secrets.ORACLE_FINGERPRINT }}
