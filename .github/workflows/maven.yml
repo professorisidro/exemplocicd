@@ -29,5 +29,14 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Listing contents
       run: ls -la
+    - name: Copiando arquivos para a Oracle Cloud
+      uses: appleboy/scp-action@v0.0.1
+      with:
+        hostname: 144.22.179.172
+        fingerprint: ${ORACLE_FINGERPRINT}
+        source: ./target/exemplocicd-0.0.1-SNAPSHOT.jar
+        target: /home/opc/api/
+        username: opc
+      
    
     
